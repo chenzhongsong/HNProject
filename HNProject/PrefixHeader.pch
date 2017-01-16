@@ -1,0 +1,52 @@
+//
+//  PrefixHeader.pch
+//  HNProject
+//
+//  Created by eliteall on 2017/1/5.
+//  Copyright © 2017年 chenzhongsong. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+// name "工程名-Prefix.pch"
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#import <Masonry/Masonry.h>
+#import <JKCategories/JKCategories.h>
+
+#endif
+
+
+#pragma mark - 打印输出
+#define     NSLog(format, ...)
+
+
+//#if DEBUG
+//    #define debuglog(format, ...)   NSLog(format, __VA_ARGS__)
+//#else
+//    #define debuglog(format, ...)
+//#endif
+
+
+//#ifdef DEBUG
+//#define NSLog(...) NSLog(__VA_ARGS__)
+//#define debugMethod() NSLog(@"%s", __func__)
+//#else
+//#define NSLog(...)
+//#define debugMethod()
+//#endif
+
+
+#endif /* PrefixHeader_pch */
